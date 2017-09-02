@@ -1,0 +1,14 @@
+v1.0
+2017-9-1
+
+- Added function to display Game Over text when the ball hits the bottom or top walls.
+- Implemented correct circle-line segment collision detection algorithm.
+- Implemented Paddle class.
+- Added ability to move the paddle via selected keyboard keys.
+- New window dimensions are 1200px by 1000px.  
+
+v0.1
+2017-8-16
+
+- Created Ball and Brick classes.
+- Implemented math functions to convert Cartesian coordinates to Processing coordinates.
