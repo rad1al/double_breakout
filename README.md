@@ -6,7 +6,14 @@
 
 An implemention and variation of a classic game done in Processing 3.
 
-#### Key Repeat on macOS Sierra
+#### To play:
+
+- In the browser: [click here](https://rad1al.github.io/double_breakout.html "double_breakout")
+- On the desktop: clone the directory and run with Processing 3.3.5 or later.
+
+#### Issues:
+
+**Key Repeat on macOS Sierra**
 
 When holding down keyboard keys on macOS Sierra to move the paddle, they may become unresponsive due to how Apple changed how key repeat works. To fix this, you'll have to enter the following in Applications → Utilities → Terminal:
 

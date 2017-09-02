@@ -1,9 +1,7 @@
 float screen_width = 1200;
 float screen_height = 1000;
-//PFont font = ;
 
 ArrayList<Brick> bricks = new ArrayList<Brick>(); 
-
 boolean keyA = false;
 boolean keyD = false;
 //Brick b = new Brick(10, 20);
@@ -16,7 +14,6 @@ void setup() {
   size(1200, 1000); // Set window dimensions.
   pixelDensity(2); // Turn on retina mode for retina screens. Doesn't work with Processing.js
   create_bricks();
-  
 }
 
 void draw() {
