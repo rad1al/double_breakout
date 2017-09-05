@@ -1,3 +1,12 @@
+v1.1
+2017-9-5
+
+- Implemented a second paddle (located on the top) which moves in the opposite horizontal direction of the first paddle (located on the bottom).
+- Implemented a restart function to allow player to restart the game on a Game Over screen.
+- Implemented a score counter.
+- Refactored game_over() function, now belongs to Stage class instead of Ball class.
+- Added additional comments to clarity the functionality of each function.
+
 v1.0
 2017-9-1
 

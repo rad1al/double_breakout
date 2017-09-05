@@ -8,7 +8,7 @@ class Paddle {
   float lrx, lry;
   float spd = 10;
 
-  Paddle(float x, float y) {
+  Paddle(float x, float y, float spd) {
     this.x = x;
     this.y = y;
     this.ulx = x;
@@ -19,6 +19,7 @@ class Paddle {
     this.lly = y-h;
     this.lrx = x+w;
     this.lry = y-h;
+    this.spd = spd;
   }
 
   void _draw()

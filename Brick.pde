@@ -3,7 +3,7 @@ class Brick {
   float w = 100; 
   float h = 50;
   color c;
-  float ulx, uly; //Corners of the brick. 
+  float ulx, uly; // corners of the brick. 
   float urx, ury;
   float llx, lly;
   float lrx, lry;
@@ -27,22 +27,31 @@ class Brick {
     if (visible) {
       fill(this.c);
       rect(cx(x), cy(y), w, h);
-      //ellipse(cx(lrx), cy(lry), 20, 20);
     }
   }
 
   void highlight_corners() {
-    // draw circles on the corners of the brick to help with debugging.
+    // Draw circles on the corners of the brick to help with debugging.
     fill(#FF6C6C);
     ellipse(cx(ulx), cy(uly), 20, 20);
     ellipse(cx(urx), cy(ury), 20, 20);
     ellipse(cx(llx), cy(lly), 20, 20);
     ellipse(cx(lrx), cy(lry), 20, 20);
   }
+  
+  void toggle_visible(boolean b) {
+    // Toggle visibility of brick.
+    this.visible = b;
+  }
+  
+  void hit_brick(Stage s){
+    toggle_visible(false);
+    s.score += 1;
+  }
 }
 
 void create_bricks() {
-  // initialize bricks with different color for each layer.
+  // Initialize bricks with different color for each layer.
   for (int i = -6; i < 5; i++) { //creates 7
     bricks.add(new Brick(i*100+50, -50, #ffb3ba)); //Pastel red
     bricks.add(new Brick(i*100+50, 0, #ffdfba)); //Pastel orange
@@ -56,5 +65,12 @@ void create_bricks() {
 void draw_bricks() {
   for (int i = 0; i < bricks.size(); i++) {
     bricks.get(i)._draw();
+  }
+}
+
+void reset_bricks() {
+  // Restore visibility for all bricks.
+  for (int i = 0; i < bricks.size(); i++) {
+    bricks.get(i).toggle_visible(true);
   }
 }
